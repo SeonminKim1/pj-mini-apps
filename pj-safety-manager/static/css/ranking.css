@@ -1,0 +1,57 @@
+/* score */
+.ranking_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+}
+
+/* score */
+.page_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.previous_btn, .next_btn {
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
+    color: grey;
+}
+
+.result_box {
+    height: 120px;
+    line-height: 100px;
+}
+
+#result_label {
+    color: white;
+    font-size: 42px;
+    vertical-align: top;
+}
+
+table {
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    width: 500px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+
+.is_safe_1 {
+    background-color: green;
+}
+
+th {
+    padding: 5px;
+}
+
+.page_btn > a {
+    margin: 0 10px;
+}

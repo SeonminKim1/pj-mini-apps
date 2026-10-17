@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bee3d4f913.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/loading_bar.css">
+
+    <!--파비콘-->
+    <link rel="icon" href="/static/css/img/Safety-manager.png" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Safety Manager</title>
+
+    <!--ajax 연결 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+</head>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/user.js') }}"></script>
+
+<body>
+{% include 'nav.html' %}
+
+<section>
+    <div class="container">
+        <!-- box 종류 -->
+        <!-- result_box img_box, main_box, loading_box, score_box, btn_box -->
+        <div class="result_box">
+            <label id='result_label'>Safety Manager</label>
+        </div>
+        <div class="img_box"></div>
+        <div class="main_box">
+            <div id="upload_div"><img class="test" id="upload_img" src="" alt=""></div>
+            <div id="predict_div"><img class="test" id="predict_img" src="" alt=""></div>
+        </div>
+        <div class="main_vid_box">
+            <div id="upload_vid_div">
+                <video id="upload_vid" controls muted preload="auto">
+                    <source id="upload_vid_src" src="" type="video/mp4">
+                </video>
+            </div>
+            <div id="predict_vid_div">
+                <video id="predict_vid" controls>
+                    <source id="predict_vid_src" src="" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="loading_box">
+            <div id="loading_div"></div>
+            <div id="loading_text">Processing</div>
+        </div>
+        <div class="score_box">
+            <label class='score_label'>| 헬멧 :&nbsp;</label><span class='score_value' id="helmet_value"> 0</span>
+            <label class='score_label'>| No헬멧 :&nbsp;</label><span class='score_value' id="head_value"> 0</span>
+            <label class='score_label'>| 점수 :&nbsp;</label><span class='score_value' id="score_value"> 0.0</span>
+            <label class='score_label'>| 안전여부 :&nbsp;</label><span class='score_value' id="isPass_value"> </span>
+        </div>
+
+        <div class="btn_box">
+            <div>
+                <label for="file" class="btn btn_select">파일 선택</label>
+                <input id="file" type="file" style="display: none" onChange="preview()">
+            </div>
+            <div>
+                <button class="btn btn_upload" type="button" onclick="posting({{ user_info }})">업로드 하기</button>
+            </div>
+            <div>
+                <button class="btn btn_detect" type="button" onclick="detecting()">안전 확인</button>
+            </div>
+        </div>
+    </div> <!-- container -->
+</section>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/login.css">
+
+    <title>Safety Manager</title>
+
+    <!-- ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</head>
+
+<script src="{{ url_for('static', filename='js/user.js') }}"></script>
+
+<body>
+<main>
+    <!-- img -->
+    <div class="img_container">
+        <img alt="Safety Manager" src="/static/css/img/Safety-manager.png">
+    </div>
+    <!-- login container -->
+    <form id="form">
+        <input type="text" class="text_field" id="id" placeholder="아이디">
+        <input type="password" class="text_field" id="pwd" placeholder="비밀번호">
+        <input type="button" class="submit_btn" onclick="login()" value="로그인">
+    </form>
+    <div class="join_container">
+        <a href="/user/join">가입하기</a>
+    </div>
+</main>
+</body>
+
+</html>

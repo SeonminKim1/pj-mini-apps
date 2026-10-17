@@ -1,0 +1,72 @@
+.profile_warp {
+    max-width: 1200px;
+    max-height: 1000px;
+    min-width: 1000px;
+    min-height: 800px;
+    width: 65%;
+    height: 100%;
+    margin: auto;
+    padding: 30px;
+}
+
+.profile_box {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.name_box {
+    width: 100%;
+    height: 12%;
+    padding-top: 10px;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result_list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+}
+
+.result_list .post {
+    width: 100%;
+    height: 250px;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+}
+
+.result_list img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.result_list video {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.result_list p {
+    margin: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.prev_btn, .next_btn {
+    margin: 0 20px 0 20px;
+}

@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #C0C0C0;
+}
+
+section {
+    width: 100%;
+    height: 1000px;
+    padding:50px;
+    /*padding: 10px;*/
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url('./img/monitor.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.result_box{
+    padding:40px 0px 10px 0px;
+    color:whitesmoke;
+    font-size:80px;
+    font-weight: 900;
+    text-align:center;
+}
+
+.img_box{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./img/Safety-manager.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:450px;
+    padding-bottom:30px;
+}
+
+/* main box */
+.main_box, .main_vid_box{
+    width:0px;
+    height:0px;
+    display: none;
+}
+
+/* score */
+.score_box{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 24px;
+}
+.score_label{
+    margin: 5px 20px;
+}
+.score_value{
+    margin: 5px 10px;
+}
+
+/* btn */
+.btn_box {
+    width: 100%;
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn{
+    width: 140px;
+    height: 40px;
+    margin:0px 20px 0px 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20px;
+}
+.btn_select {
+    padding-top:5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: lightslategrey;
+}
+
+.btn_upload {
+    background-color: #52608D
+}
+
+.btn_detect {
+    background-color: darkblue;
+}
+
+.btn:hover {
+    width: 160px;
+}
