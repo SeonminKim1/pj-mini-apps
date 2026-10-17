@@ -1,0 +1,347 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* ai 페이지  */
+.container-painting {
+    /* display: none; */
+    margin-top: 3%;
+}
+
+.wrap-content-painting {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-img {
+    background-color: slategray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    height: 400px;
+    padding: 3%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.box-base {
+    width: 40%;
+    margin-left: 5%;
+}
+
+.base-img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.style-img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.box-base:hover {
+    background-color: blue;
+    color: whitesmoke;
+}
+
+.box-style {
+    width: 40%;
+    margin-right: 5%;
+}
+
+.box-style:hover {
+    background-color: blueviolet;
+    color: whitesmoke;
+}
+
+.label-img {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.box-btn-painting {
+    width: 40%;
+    margin: 3% auto;
+    text-align: center;
+}
+
+.btn-painting {
+    border: 0;
+    outline: 0;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+}
+
+.btn-painting:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
+
+/* 추론 페이지 */
+
+.container-process {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    line-height: 90vh;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+}
+
+/* 결과 페이지 */
+
+.container-result {
+    display: none;
+    margin-top: 3%;
+}
+
+.wrap-content-result {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-result {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 500px;
+    padding: 3%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.result-img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.box-img-result {
+    width: 45%;
+    margin-left: 5%;
+}
+
+.box-text-result {
+    width: 45%;
+    margin-right: 5%;
+}
+
+.text-title > input,
+.text-price > input,
+.text-category > span,
+.btn-result {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.text-description > input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.text-title,
+.text-price,
+.text-description,
+.btn-result {
+    margin-bottom: 2rem;
+    padding: 10px;
+}
+
+.text-title,
+.text-price,
+.text-description {
+    text-indent: 5px;
+}
+
+.text-title,
+.text-price,
+.text-category,
+.text-description,
+.text-title > input,
+.text-price > input,
+.text-description > input {
+    background-color: lightgray;
+}
+
+.text-category {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.box-radio {
+    margin: 2% 0;
+}
+
+.box-radio > span {
+    margin: 2% 5% 0 0;
+    font-size: 1.2rem;
+}
+
+.box-radio input[type=radio]{
+    display: none;
+}
+
+.box-radio input[type=radio]+label{
+    display: inline-block;
+    cursor: pointer;
+    height: 24px;
+    width: 80px;
+    border: 1px solid #333;
+    line-height: 24px;
+    text-align: center;
+    font-weight:bold;
+    font-size: 13px;
+    margin-left: 1%;
+}
+
+.box-radio input[type=radio]+label{
+    background-color: #fff;
+    color: #333;
+}
+
+.box-radio input[type=radio]:checked+label{
+    background-color: #333;
+    color: #fff;
+}
+
+.box-btn-result {
+    margin-top: 2rem;
+}
+
+.btn-result {
+    cursor: pointer;
+    background-color: slategray;
+}
+
+.btn-result:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-painting {
+        margin-top: 15%;
+    }
+
+    .box-img {
+        padding: 8% 5%;
+        color: black;
+        font-size: 0.8rem;
+    }
+
+
+    /*결과 페이지*/
+    .container-result {
+        margin-top: 15%;
+    }
+
+    .wrap-content-result {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-result {
+        margin: 20px auto;
+        padding: 3% 5%;
+        color: black;
+        font-size: 1rem;
+    }
+
+    .box-img-result {
+        width: 70%;
+    }
+
+    .box-text-result {
+        width: 80%;
+    }
+}
+
+
+/* 추론페이지 loadingbar */
+.loader {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    animation: 1s infinite ease-in-out;
+}
+
+.loader:before,
+.loader:after {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loader-circle {
+    background-color: white;
+    animation: loadercircle 60s infinite ease-in-out;
+}
+
+.loader-circle:before {
+    content: '';
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    top: 10%;
+    left: 10%;
+    box-shadow: 15px -9px 0 rgba(138,43,226,0.85),
+                15px 15px 0 rgba(0,0,0,0.85),
+                -9px 15px 0 rgba(0,0,255,0.85),
+                -15px -15px 0 rgba(245,245,245,0.85);
+}
+
+.loader-circle:after {
+    content: 'MIXING';
+    border: 3px solid white;
+    z-index: 2;
+    top: -3px;
+    left: -3px;
+}
+
+@keyframes loadercircle {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360000deg); }
+}
